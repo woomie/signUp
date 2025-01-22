@@ -1,11 +1,19 @@
-// function to store the data
+// function to store the data to firebase
+import {database} from "../config/config-auth.js";
+import submitForm from "./submitformdata.js";
+
+//const dataBase = firebase.database();
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("form").addEventListener("submit", submitForm);
+    //form.reset();
+});
 
 function postToFirebase(obj){
-    let reference =firebase.database().ref("users/").push();
+    let reference =database.ref("users/").push();
     reference.set({
         name:obj.name,
         email:obj.email,
-        dateOfBirth:obj.dateOfBirth,
+        birthday:obj.birthday,
         password:obj.password
     });
 }

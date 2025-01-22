@@ -1,0 +1,14 @@
+setting up for firebase
+the process for auth and realtime are a bit different, for auth
+you dont need an actual database so the cdn in the config file will
+not include a database url so you get use the cdn from the realtime database instead
+
+you have to attach the cdn to the index.html file and they have to be the same type
+the one i have been using is the compat one if it isnt an error will occur, it has firebase.database
+the others dont have that function so you might keep getting errors.
+
+copy this to your index.html in this order
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-auth-compat.js"></script>
+    <script type="module" src="./modules/app.js" ></script>
