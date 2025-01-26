@@ -10,6 +10,8 @@ function submitForm(event){
         password: getFormInput("password")
     }
     postToFirebase(obj);
+    window.location.href = "./modules/home.html";
+    
 }
 
 export default submitForm;
