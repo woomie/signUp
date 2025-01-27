@@ -1,4 +1,3 @@
-/* Global Styles */
 body {
     display: flex;
     justify-content: center;
@@ -6,11 +5,10 @@ body {
     height: 100vh;
     width: 100%;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: rgb(20, 21, 27);
 }
 
-/* Container Styling */
 .container {
     display: flex;
     flex-direction: column;
@@ -24,18 +22,18 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Heading Styles */
+
 h1 {
     margin: 50px 0;
     text-align: center;
     font-size: 2.5rem;
 }
 
-/* Input Fields */
+
 input {
     margin: 10px 0;
     padding: 10px;
-    width: 80%; /* Increased responsiveness */
+    width: 80%; 
     border: 1px solid rgb(189, 187, 187);
     border-radius: 8px;
     font-size: 16px;
@@ -46,7 +44,7 @@ input::placeholder {
 }
 
 input:focus {
-    border-color: #010b1c; /* Active/focus border color */
+    border-color: #010b1c; 
     outline: none;
 }
 
@@ -54,7 +52,7 @@ input[type="date"]::-webkit-datetime-edit {
     color: #9ca3af;
 }
 
-/* Form Styling */
+
 form {
     width: 100%;
     display: flex;
@@ -67,7 +65,7 @@ label{
     display:none;
 }
 
-/* Button Styles */
+
 button {
     padding: 12px;
     margin-top: 20px;
@@ -88,7 +86,7 @@ button:hover {
 
 
 
-/* Left Side Image */
+
 #left-side {
     display: none;
 }
@@ -101,13 +99,13 @@ button:hover {
     border-bottom-right-radius: 30px;
 }
 
-/* Content Layout */
+
 .content {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
-/*css for home.html*/
+
 #message-page{
     width: 100%;
     height:100vh;
@@ -142,14 +140,14 @@ button:hover {
     justify-content: center;
     align-items: center;
 }
-/* Neon Text Effect */
+
 .neon {
     color: #fff;
     text-shadow: 
         0 0 7px #fff, 
         0 0 10px #fff, 
         0 0 21px #fff, 
-        0 0 42px #2323ff, /* Brighter Blue */
+        0 0 42px #2323ff, 
         0 0 82px #2323ff, 
         0 0 92px #2323ff, 
         0 0 102px #2323ff, 
@@ -173,7 +171,7 @@ button:hover {
 
 }
 
-/* Animations */
+
 @keyframes flicker {
     0% {
         text-shadow: 
@@ -214,8 +212,8 @@ button:hover {
 }
 
 .neon-button:hover {
-    color: #2323ff; /* Slight change for hover effect */
-    background-color: rgba(0, 170, 255, 0.1); /* Add faint blue background */
+    color: #2323ff; 
+    background-color: rgba(0, 170, 255, 0.1); 
     box-shadow: 
         0 0 10px #2323ff,
         0 0 20px #2323ff,

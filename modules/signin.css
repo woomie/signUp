@@ -1,21 +1,23 @@
-/* Sign-in html page */
+body {
+    font-family: 'Poppins', sans-serif;
+}
 .sign-in-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: auto; /* Center on the page */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    margin: auto; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
     background-color: white;
     border-radius: 20px;
-    overflow: hidden; /* Prevent content overflow */
+    overflow: hidden; 
 }
 
 input {
     margin: 10px 0;
     padding: 10px;
-    width: 80%; /* Increased responsiveness */
+    width: 80%; 
     border: 1px solid rgb(189, 187, 187);
     border-radius: 8px;
     font-size: 16px;
@@ -26,18 +28,18 @@ input::placeholder {
 }
 
 input:focus {
-    border-color: #010b1c; /* Active/focus border color */
+    border-color: #010b1c; 
     outline: none;
 }
 
 form {
-    width: 90%; /* Adjusted width */
+    width: 90%; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    box-sizing: border-box; /* Includes padding in width/height */
+    box-sizing: border-box; 
 }
 
 button {
@@ -70,8 +72,8 @@ button:hover {
 
 .sign-in-other-div img {
     width: 100%;
-    object-fit: cover; /* Ensures proper image scaling */
-    max-height: 500px; /* Constrain height */
+    object-fit: cover; 
+    max-height: 500px; 
 }
 label{
     display: none;
@@ -83,7 +85,7 @@ label{
         justify-content: center;
         align-items: center;
         background-color: #f4f4f4;
-        height: 100vh; /* Ensures full height layout */
+        height: 100vh; 
         margin: 0;
     }
     .sign-in-container {
