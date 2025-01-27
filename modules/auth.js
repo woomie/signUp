@@ -1,5 +1,6 @@
 import getFormInput from "./getData.js";
 import {auth} from "../config/config-auth.js"; //auth is already initialised in config-auth
+import postToFirebase from "./storedata.js";
 
 
 
@@ -14,13 +15,25 @@ document.addEventListener('DOMContentLoaded', function() {
     
             const email= getFormInput("email");
             const password = getFormInput("password");
+
         
             auth.createUserWithEmailAndPassword(email,password)
             .then((userDetails) =>{
                 console.log(userDetails)
                 let userId = userDetails.user.uid;
                 console.log(`User was created and here is the ID: ${userId}`);
-    
+                const userData = {
+                    name: getFormInput("name"),
+                    email: email,
+                    birthday:getFormInput("birthday"),
+                    uid: userId
+                }
+            
+            postToFirebase(userData);
+            
+            window.location.href = "./modules/home.html";
+
+
             }).catch((e)=>{
                 console.log(e);
             })

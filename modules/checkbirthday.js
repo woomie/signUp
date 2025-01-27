@@ -42,13 +42,14 @@ userRef.on("value", (data) =>{
 
         if (nextBirthday.getTime() === today.getTime()){
             birthday.innerHTML = `<h1>Happy Birthday ${response[key].name}</h1>`
+            getQoutes().then(quotes =>{
+                quote.innerHTML = `<h5>-${quotes}</h5>`
+            });
         } else{
             birthday.innerHTML = `<h1>you have ${Difference_In_Days} Days until your birthday</h1>`
         }
 
-        getQoutes().then(quotes =>{
-            quote.innerHTML = `<h4>-${quotes}</h4>`
-        })
+        
        
         
     });
