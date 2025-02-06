@@ -30,11 +30,11 @@ userRef.on("value", (data) =>{
             nextBirthday.setFullYear(currentYear + 1);
         }
         // Calculating the time difference of two dates
-        let Difference_In_Time = nextBirthday.getTime() - today.getTime();
+        let DifferenceInTime = nextBirthday.getTime() - today.getTime();
 
         // Calculating the no. of days between two dates
-        let Difference_In_Days = Math.round(Difference_In_Time / (1000 * 3600 * 24));
-        //console.log(Difference_In_Days);
+        let DifferenceInDays = Math.round(DifferenceInTime / (1000 * 3600 * 24));
+        //console.log(DifferenceInDays);
 
         //check if its users birthday or not
         const birthday = document.getElementById("birthday");
@@ -46,7 +46,7 @@ userRef.on("value", (data) =>{
                 quote.innerHTML = `<h5>-${quotes}</h5>`
             });
         } else{
-            birthday.innerHTML = `<h1>you have ${Difference_In_Days} Days until your birthday</h1>`
+            birthday.innerHTML = `<h1>you have ${DifferenceInDays} Days until your birthday</h1>`
         }
 
         
